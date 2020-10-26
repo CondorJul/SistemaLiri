@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importante.CImportante">
+   <top>
+      <BorderPane prefHeight="49.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox prefHeight="65.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="agregar" fx:id="jfxButtonNuevoRecordar" prefHeight="53.0" prefWidth="210.0" text="Nuevo Recordar" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TAG" size="40" />
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="12.0" />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+         <left>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="21.0" prefWidth="348.0">
+                     <left>
+                        <TextField fx:id="textFieldBuscarImportante" prefHeight="36.0" prefWidth="309.0" promptText="Buscar lo mas Importante" style="-fx-border-color: #1c99dd; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets right="3.0" />
+                           </BorderPane.margin>
+                        </TextField>
+                     </left>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <DatePicker fx:id="datePickerFechaInicio" prefHeight="36.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="3.0" />
+                           </BorderPane.margin>
+                        </DatePicker>
+                     </left>
+                     <right>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <DatePicker fx:id="datePickerFechaFin" prefHeight="36.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="3.0" />
+                                 </BorderPane.margin>
+                              </DatePicker>
+                           </left>
+                           <right>
+                              <Button id="agregar" fx:id="buttonBuscar" mnemonicParsing="false" prefHeight="35.0" prefWidth="43.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="23" />
+                                 </graphic>
+                                 <BorderPane.margin>
+                                    <Insets left="3.0" />
+                                 </BorderPane.margin>
+                              </Button>
+                           </right>
+                        </BorderPane>
+                     </right>
+                  </BorderPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="28.0" prefWidth="1000.0" style="-fx-background-color: #f16a1b;" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Listado de lo mas importante" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="15.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="10.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView fx:id="tableViewImportante" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="tableColumnId" prefWidth="49.0" text="#" visible="false" />
+                      <TableColumn fx:id="tableColumnCodigo" maxWidth="3000.0" prefWidth="171.0" text="Código" />
+                        <TableColumn fx:id="tableColumnDescripcion" maxWidth="10000.0" prefWidth="140.0" text="Descripción" />
+                        <TableColumn fx:id="tableColumnFechaInicio" prefWidth="64.0" text="Fecha Inicio" />
+                        <TableColumn fx:id="tableColumnFechaFin" prefWidth="75.0" text="Fecha Fin" />
+                        <TableColumn fx:id="tableColumnTalla" prefWidth="75.0" text="Talla" />
+                        <TableColumn fx:id="tableColumnCantidad" prefWidth="75.0" text="Cantidad" />
+                        <TableColumn fx:id="tableColumnDemanda" maxWidth="3800.0" prefWidth="75.0" text="Nro Demanda" />
+                        <TableColumn fx:id="tableColumnComentario" prefWidth="75.0" text="Comentario" />
+                        <TableColumn fx:id="tableColumnOpciones" prefWidth="75.0" text="Opciones" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenuOpcionesTabla">
+                          <items>
+                            <MenuItem fx:id="menuItemRefrescar" mnemonicParsing="false" text="Refrescar" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </center>
+</BorderPane>

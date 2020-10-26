@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.alquiler.CSeeBoleta">
+   <children>
+      <AnchorPane id="anchorPaneModal" layoutX="12.0" layoutY="12.0" prefHeight="633.0" prefWidth="670.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <BorderPane prefHeight="633.0" prefWidth="655.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <BorderPane prefHeight="40.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/proveedor3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="tipoLetra1" text="Boleta">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </bottom>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="35.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonCerrar" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: none;" text="X" textFill="RED">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </top>
+               <bottom>
+                  <BorderPane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <Separator BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </top>
+                     <right>
+                        <HBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton id="botonCancelar" fx:id="jfxButtonCerrar" text="Cancelar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="25.0" wrappingWidth="23.64285659790039" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton id="botonGuardar" fx:id="jfxButtonValidar" text="Imprimir" textFill="#110000">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="25.0" wrappingWidth="27.428571701049805" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <BorderPane prefHeight="542.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </BorderPane.margin>
+                     <bottom>
+                        <Label fx:id="labelVerificacion" prefHeight="20.0" prefWidth="741.0" text="verificacion" textFill="#282727" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <left>
+                        <BorderPane prefHeight="522.0" prefWidth="396.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <BorderPane prefHeight="514.0" prefWidth="369.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                <AnchorPane id="tabPaneEstilo2" fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="394.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Vista Previa" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                                 <BorderPane.margin>
+                                    <Insets bottom="4.0" right="2.0" top="4.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </top>
+                        </BorderPane>
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <BorderPane fx:id="borderPaneReservacion" prefHeight="261.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" fx:id="anchorPaneReservacion" minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane fx:id="gridPaneReservacion" layoutX="27.0" layoutY="49.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="Fecha  de Recojo : " BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <center>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <Label fx:id="labelFechaRecojo" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="134.0" textFill="#ffa109">
+                                                               <font>
+                                                                  <Font name="System Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <Label fx:id="lableDiasAntesODespues" prefHeight="36.0" prefWidth="225.0" textFill="#4f04ff" wrapText="true" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font></Label>
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="A cuenta (S/) :" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <right>
+                                                      <Label fx:id="labelACuenta" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </right>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="Saldo (S/) :" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <right>
+                                                      <Label fx:id="labelSaldo" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </right>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Reservación" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                                 <BorderPane.margin>
+                                    <Insets bottom="4.0" top="4.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </top>
+                           <bottom>
+                              <BorderPane prefHeight="251.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" fx:id="anchorPane11" minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane fx:id="gridPanePago" layoutX="77.0" layoutY="33.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="Total a Cobrar (S/) :" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <right>
+                                                      <Label fx:id="labelTotalACobrar" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="100.0" text="50.00" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </right>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="Efectivo Recibido (S/) : " BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <right>
+                                                      <TextField fx:id="textFieldEfectivoRecibido" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="101.0" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </right>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                   <left>
+                                                      <Label id="labelTipoLetra" text="Cambio (S/) :" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                   <right>
+                                                      <Label fx:id="labelCambio" alignment="CENTER_RIGHT" prefWidth="100.0" text="0.00" textFill="#ff0505" BorderPane.alignment="CENTER">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </right>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Pago" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                                 <padding>
+                                    <Insets bottom="4.0" />
+                                 </padding>
+                              </BorderPane>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

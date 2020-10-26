@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dataBase.RealizarBackupController">
+   <children>
+      <BorderPane layoutX="200.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="675.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleBackup" text="Realizar Backup" textFill="#463939">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane prefHeight="375.0" prefWidth="487.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="82.0" />
+                      <ColumnConstraints halignment="LEFT" maxWidth="337.0" minWidth="10.0" prefWidth="337.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Compilador MySQL :" GridPane.rowIndex="2" />
+                        <Label text="Usuario MySQL :" GridPane.rowIndex="4" />
+                        <Label text="Contraseña MySQL :" GridPane.rowIndex="5" />
+                        <TextField fx:id="textFieldUsesrMySQL" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="textFieldContreseniaMySQL" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                          <buttons>
+                            <Button fx:id="btnConnect" defaultButton="true" mnemonicParsing="false" onAction="#btnConnectOnAction" text="Realizar Backup" />
+                          </buttons>
+                        </ButtonBar>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="textFieldCompiladorMySQL" prefHeight="25.0" prefWidth="267.0" text="C:\xampp\mysql\bin" />
+                              <Button fx:id="buttonBuscarCompiladoMySQL" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Buscar" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="lablServerStatus" alignment="CENTER" contentDisplay="CENTER" text="Servidor Apagado" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="textAreaMensaje" prefHeight="81.0" prefWidth="476.0" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Tener en cuenta que la  realización de la backup se realiza en el mismo servidor." textAlignment="CENTER" textFill="RED" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <Label text="Guardar Como :" GridPane.rowIndex="3" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField fx:id="textFieldUbicacionBackup" prefHeight="25.0" prefWidth="267.0" />
+                              <Button fx:id="buttonBuscarBuscarubicacionBackup" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Buscar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

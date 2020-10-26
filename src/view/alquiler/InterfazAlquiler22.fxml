@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="1000.0" styleClass="specialJFXTabPane" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Nuevo Alquiler">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="390.0" layoutY="151.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <content>
+                                        <AnchorPane minHeight="1000.0" minWidth="650.0" prefHeight="1000.0" prefWidth="593.0">
+                                             <children>
+                                                <BorderPane id="tabPaneEstilo2" prefHeight="242.0" prefWidth="865.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="863.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane hgap="10.0" layoutX="21.0" layoutY="14.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                     <right>
+                                                                        <Label id="labelTipoLetra" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="158.0" text="Código/DNI :" BorderPane.alignment="CENTER" />
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                                     <center>
+                                                                        <TextField fx:id="textFieldCodigoProveedor" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                     <right>
+                                                                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="54.0" BorderPane.alignment="CENTER">
+                                                                           <children>
+                                                                              <Button fx:id="buttonBuscarProveedor" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#01b907" glyphName="SEARCH" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                              <Button fx:id="buttonEliminarProveedor" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#cd0000" glyphName="CLOSE" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" text="Código :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField prefHeight="10.0" prefWidth="375.0" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Apellidos y Nombres :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Dirección :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Referencia :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="DNI :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Correo Electrónico :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="N° Telefono :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                   <top>
+                                                      <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <Label id="tabPaneLetra" contentDisplay="CENTER" text="Datos de Cliente" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <padding>
+                                                                  <Insets left="4.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                         <BorderPane.margin>
+                                                            <Insets />
+                                                         </BorderPane.margin>
+                                                      </AnchorPane>
+                                                   </top>
+                                                </BorderPane>
+                                                <BorderPane id="tabPaneEstilo2" layoutX="10.0" layoutY="10.0" prefHeight="208.0" prefWidth="640.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="325.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane hgap="2.0" layoutX="21.0" layoutY="14.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="6">
+                                                                    <columns>
+                                                                      <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="#" />
+                                                                      <TableColumn maxWidth="70.0" minWidth="50.0" prefWidth="70.0" text="Cant" />
+                                                                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" text="Descripcion de Articulo" />
+                                                                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="P. Articulo" />
+                                                                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Importe" />
+                                                                    </columns>
+                                                                     <columnResizePolicy>
+                                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                     </columnResizePolicy>
+                                                                  </TableView>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                   <top>
+                                                      <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <Label id="tabPaneLetra" contentDisplay="CENTER" text="Artículos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <padding>
+                                                                  <Insets left="4.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                         <BorderPane.margin>
+                                                            <Insets />
+                                                         </BorderPane.margin>
+                                                      </AnchorPane>
+                                                   </top>
+                                                </BorderPane>
+                                                <BorderPane layoutX="5.0" layoutY="779.0" prefHeight="91.0" prefWidth="640.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                   <right>
+                                                      <GridPane prefHeight="107.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="SubTotal" />
+                                                            <Label text="IGV (%)" GridPane.rowIndex="1" />
+                                                            <Label text="Total" GridPane.rowIndex="3" />
+                                                            <Label text="Label" GridPane.columnIndex="1" />
+                                                            <Label text="Descuento" GridPane.rowIndex="2" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </right>
+                                                   <left>
+                                                      <GridPane BorderPane.alignment="CENTER">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label text="Tarjetas de descuento" GridPane.columnSpan="2" />
+                                                            <JFXCheckBox GridPane.rowIndex="1" />
+                                                            <JFXCheckBox GridPane.rowIndex="2" />
+                                                            <JFXCheckBox GridPane.rowIndex="3" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                </BorderPane>
+                                                <GridPane layoutX="132.0" layoutY="918.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Recomendado por" />
+                                                      <TextField text="otros datos mas" GridPane.columnIndex="1" />
+                                                      <Label text="Tipo de garantia" GridPane.rowIndex="1" />
+                                                      <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Enlaza boleta" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <HBox alignment="CENTER" layoutX="82.0" layoutY="260.0" prefHeight="39.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                                   <children>
+                                                      <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                         <left>
+                                                            <FontAwesomeIconView fill="#ff4000" glyphName="SHOPPING_CART" size="23" BorderPane.alignment="CENTER" />
+                                                         </left>
+                                                         <right>
+                                                            <Label text=" Carrito de Alquiler" textFill="#ff6a00" BorderPane.alignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </right>
+                                                      </BorderPane>
+                                                   </children>
+                                                </HBox>
+                                                <BorderPane id="tabPaneEstilo2" layoutX="12.0" layoutY="556.0" prefHeight="208.0" prefWidth="640.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="550.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane hgap="2.0" layoutX="21.0" layoutY="14.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="6">
+                                                                     <columns>
+                                                                        <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="#" />
+                                                                        <TableColumn maxWidth="70.0" minWidth="50.0" prefWidth="70.0" text="Cant" />
+                                                                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" text="Descripcion de Articulo" />
+                                                                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="P. Pieza" />
+                                                                        <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Importe" />
+                                                                     </columns>
+                                                                     <columnResizePolicy>
+                                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                     </columnResizePolicy>
+                                                                  </TableView>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                   <top>
+                                                      <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <Label id="tabPaneLetra" contentDisplay="CENTER" text="Piezas por Artículos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <padding>
+                                                                  <Insets left="4.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                         <BorderPane.margin>
+                                                            <Insets />
+                                                         </BorderPane.margin>
+                                                      </AnchorPane>
+                                                   </top>
+                                                </BorderPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="556.0" prefWidth="559.0">
+                                             <children>
+                                                <TableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="100.0">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="C1" />
+                                                    <TableColumn prefWidth="75.0" text="C2" />
+                                                  </columns>
+                                                </TableView>
+                                                <BorderPane layoutX="14.0" layoutY="-30.0" prefHeight="46.0" prefWidth="464.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                             </children></AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                              </BorderPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Lista de alquileres">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <BorderPane prefHeight="49.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <BorderPane prefHeight="21.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                                 <left>
+                                    <TextField fx:id="textFieldBuscarAlquiler" prefHeight="36.0" prefWidth="309.0" promptText="Buscar  Articulos Alquilados" style="-fx-border-color: #1c99dd; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <BorderPane.margin>
+                                          <Insets right="-4.0" />
+                                       </BorderPane.margin>
+                                    </TextField>
+                                 </left>
+                                 <right>
+                                    <Button id="agregar" mnemonicParsing="false" prefHeight="35.0" prefWidth="43.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="23" />
+                                       </graphic>
+                                    </Button>
+                                 </right>
+                                 <BorderPane.margin>
+                                    <Insets left="15.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </left>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TreeTableView fx:id="treeTableViewAlquiler" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TreeTableColumn fx:id="tableColumnCodigo" prefWidth="94.0" text="Codigo" />
+                                        <TreeTableColumn fx:id="tableColumnNombre" prefWidth="230.0" text="Nombre" />
+                                          <TreeTableColumn fx:id="tableColumnFamilia" prefWidth="108.0" text="Familia" />
+                                          <TreeTableColumn fx:id="tableColumnStock" prefWidth="94.0" text="Stock" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </center>
+                              </BorderPane>
+                           </center>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </BorderPane.margin>
+                        </BorderPane>
+                     </center></BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.articulo.CDetalleArticulo">
+   <children>
+      <AnchorPane id="anchorPaneFondo" layoutX="17.0" layoutY="10.0" prefHeight="579.0" prefWidth="1363.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <BorderPane prefHeight="40.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label id="tipoLetra1" text="Detalle Artículo" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </bottom>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="35.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonCerrar" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: none;" text="X" textFill="RED">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="318.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </BorderPane.margin>
+                     <center>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>
+                            <Tab text="Detalle">
+                                 <content>
+                                    <BorderPane prefHeight="178.0" prefWidth="478.0">
+                                       <center>
+                                          <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <GridPane minHeight="325.0" prefHeight="411.0" prefWidth="1241.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints maxHeight="43.0" minHeight="9.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints />
+                                                            <RowConstraints />
+                                                            <RowConstraints minHeight="10.0" prefHeight="70.0" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="90.0" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <center>
+                                                                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                     <children>
+                                                                        <TextField fx:id="textFieldArticuloBuscar" prefHeight="30.0" prefWidth="437.0" promptText="Buscar" />
+                                                                        <Button id="agregar" fx:id="buttonArticuloBuscar" mnemonicParsing="false" prefHeight="30.0" prefWidth="43.0" textFill="WHITE" translateX="-4.0">
+                                                                           <graphic>
+                                                                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="18" />
+                                                                           </graphic>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="366.0" prefWidth="913.0" GridPane.rowIndex="1" GridPane.rowSpan="5">
+                                                               <center>
+                                                                  <TableView fx:id="tableViewDetalle" prefHeight="369.0" prefWidth="1237.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="tableColumnDetalleNro" maxWidth="1000.0" prefWidth="35.000030517578125" text="#" />
+                                                                        <TableColumn fx:id="tableColumnDetalleCodArtPieza" maxWidth="3000.0" prefWidth="94.99996948242188" text="Cod. Art/Piez" />
+                                                                        <TableColumn fx:id="tableColumnDetalleCant" prefWidth="57.000030517578125" text="Cant." />
+                                                                        <TableColumn fx:id="tableColumnDetalleDescripcion" maxWidth="6000.0" minWidth="2.0" prefWidth="305.0" text="Descripción" />
+                                                                        <TableColumn fx:id="tableColumnDetallePUnit" prefWidth="88.0" text="P. Unit. (S/)" />
+                                                                        <TableColumn fx:id="tableColumnDetalleImporte" prefWidth="85.0" text="Importe(S/)" />
+                                                                        <TableColumn fx:id="tableColumnDetalleImporteDesc" prefWidth="124.0" text="Imp. Desc. (S/)" />
+                                                                        <TableColumn fx:id="tableColumnDetalleCodCliente" minWidth="0.0" prefWidth="108.0" text="Cod. Cliente" />
+                                                                        <TableColumn fx:id="tableColumnDetalleCliente" maxWidth="2000.0" prefWidth="225.0" text="Cliente" />
+                                                                        <TableColumn fx:id="tableColumnDetalleBoleta" maxWidth="3000.0" prefWidth="118.0" text="Boleta" />
+                                                                        <TableColumn fx:id="tableColumnFecha" prefWidth="120.0" text="Fecha" />
+                                                                     </columns>
+                                                                     <BorderPane.margin>
+                                                                        <Insets bottom="8.0" top="3.0" />
+                                                                     </BorderPane.margin>
+                                                                     <contextMenu>
+                                                                        <ContextMenu id="contextMenuOpciones" fx:id="contextMenuDetalle" />
+                                                                     </contextMenu>
+                                                                  </TableView>
+                                                               </center>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                         </padding>
+                                                      </GridPane>
+                                                      <BorderPane prefHeight="81.0" prefWidth="1241.0">
+                                                         <center>
+                                                            <GridPane hgap="2.0" vgap="2.0" BorderPane.alignment="CENTER">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1039.0" minWidth="10.0" prefWidth="1039.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="615.0" minWidth="10.0" prefWidth="202.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #007CCF;">
+                                                                     <left>
+                                                                        <Label text="Total a  Facturar  sin Descuento   S/" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <padding>
+                                                                              <Insets bottom="3.0" left="5.0" right="3.0" top="3.0" />
+                                                                           </padding>
+                                                                           <font>
+                                                                              <Font name="System Bold" size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </left>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #10CF00;" GridPane.rowIndex="1">
+                                                                     <left>
+                                                                        <Label text="Total a  Facturar  con Descuento S/" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <padding>
+                                                                              <Insets bottom="3.0" left="5.0" right="3.0" top="3.0" />
+                                                                           </padding>
+                                                                           <font>
+                                                                              <Font name="System Bold" size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </left>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFAE00;" GridPane.rowIndex="2">
+                                                                     <left>
+                                                                        <Label text="Total de Diferencia                       S/" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <padding>
+                                                                              <Insets bottom="3.0" left="5.0" right="3.0" top="3.0" />
+                                                                           </padding>
+                                                                           <font>
+                                                                              <Font name="System Bold" size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </left>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #007CCF;" GridPane.columnIndex="1">
+                                                                     <right>
+                                                                        <Label fx:id="labelCostoTotal" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="87.0" text="10.00" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #10CF00;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <right>
+                                                                        <Label fx:id="labelCostoTotalDesc" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="87.0" text="10.00" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFAE00;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                     <right>
+                                                                        <Label fx:id="labelCostoTotalDiferencia" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="87.0" text="10.00" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

@@ -1,0 +1,78 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#anchorPaneModal{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius:3;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.9), 15, 0, 3, 3);
+}
+
+#tipoLetra{
+	-fx-text-fill: white;
+	-fx-font-family: Georgia;
+	-fx-font-size: 14px;
+}
+
+#menuFondo{
+	-fx-background-color:  #1c99dd;
+}
+
+#toggleButtonOpcionesMenu{
+	-fx-cursor:hand;
+	-fx-background-color:   #1c99dd;
+}
+
+#toggleButtonOpcionesMenu:hover {
+	-fx-border-color: transparent ;
+	-fx-border-width: 0px 0px 0px 4px;
+}
+
+#toggleButtonOpcionesMenu:selected{
+	-fx-background-color: #1a7eb5;
+	-fx-border-color: transparent;
+	-fx-border-width: 0px 0px 0px 4px;
+}
+
+#stackPaneFodoSemiTransparente{
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+#agregar{
+	-fx-background-color: #0033FF;
+}
+
+
+#botonGuardar{
+	-fx-background-color:  #4cae4c;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 15px;
+	-fx-text-fill: #ffffff;
+}
+
+#botonCancelar{
+	-fx-background-color: #f44336;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 15px;
+}
+
+#tabPaneEstilo1{
+	-fx-border-color:  #3778DC;
+	-fx-border-radius: 5 5 0 0;
+}
+
+#tabPaneEstilo2{
+	-fx-border-color:  #3778DC;
+	-fx-border-radius: 0 0 5 5;
+}
+
+#tabPaneLetra{
+	-fx-background-color: #3778DC;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 14px;
+	-fx-text-fill: #ffffff;
+}
+
+#labelTipoLetra{
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 12px;
+	-fx-text-fill: #282626;
+}

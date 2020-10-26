@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.articulo.CSeeRentabilidadArticulo">
+   <children>
+      <AnchorPane id="anchorPaneModal" layoutX="12.0" layoutY="12.0" prefHeight="344.0" prefWidth="563.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <BorderPane prefHeight="510.0" prefWidth="756.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <BorderPane prefHeight="40.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/proveedor3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="tipoLetra1" text="Rentabilidad">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </bottom>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="35.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonCerrar" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: none;" text="X" textFill="RED">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </top>
+               <bottom>
+                  <BorderPane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_RIGHT" spacing="15.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton id="botonCancelar" fx:id="jfxButtonCerrar" text="Cancelar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="25.0" wrappingWidth="23.64285659790039" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="5.0" />
+                           </BorderPane.margin></HBox>
+                     </center>
+                     <top>
+                        <Separator BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </top>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <BorderPane prefHeight="173.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label id="tabPaneLetra" contentDisplay="CENTER" text="Rentabilidad por Articulo" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </AnchorPane>
+                     </top>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <center>
+                        <GridPane id="tabPaneEstilo2" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4eff48;">
+                                 <left>
+                                    <Label text="Rentabilidad Sin Descuento :" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4eff48;" GridPane.columnIndex="1">
+                                 <left>
+                                    <Label fx:id="labelRentSinDesc" text="10.56 %" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Rentabilidad Con Descuento :" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label fx:id="labelRentConDesc" text="10.56 %" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                              </BorderPane>
+                              <Label text="(*) Para determinar la rentabilidad, como mínimo se debe realizar una venta o alquiler" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

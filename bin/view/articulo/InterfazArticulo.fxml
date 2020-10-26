@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.articulo.CArticulo">
+   <top>
+      <BorderPane prefHeight="49.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="239.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="agregar" fx:id="jfxButtonNuevoArticulo" prefHeight="8.0" prefWidth="188.0" text="Nuevo Articulo" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" size="40" />
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="12.0" />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+         <left>
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="751.0" spacing="2.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="65.0" prefWidth="301.0">
+                     <left>
+                        <TextField fx:id="textFieldBuscarArticulo" prefHeight="36.0" prefWidth="259.0" promptText="Buscar Articulos (Codigo, Nombre)" style="-fx-border-color: #1c99dd; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets left="5.0" right="-4.0" />
+                           </BorderPane.margin>
+                        </TextField>
+                     </left>
+                     <right>
+                        <Button id="agregar" mnemonicParsing="false" prefHeight="35.0" prefWidth="43.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="23" />
+                           </graphic>
+                        </Button>
+                     </right>
+                  </BorderPane>
+                  <ComboBox fx:id="comboBoxFamiliaArticulosPiezas" prefHeight="36.0" prefWidth="170.0" promptText="--Selecc. Familia--" />
+                  <ComboBox fx:id="comboBoxTallaArticulosPiezas" prefHeight="36.0" prefWidth="142.0" promptText="--Selec. Talla--" />
+                  <ComboBox fx:id="comboBoxGeneroArticuloPieza" prefHeight="36.0" prefWidth="142.0" promptText="--Selec. Talla--" />
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="28.0" prefWidth="1000.0" style="-fx-background-color: #f16a1b;" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Listado de Articulos" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="15.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="10.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <TreeTableView fx:id="treeTableViewArticulo" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TreeTableColumn fx:id="tableColumnCodigo" prefWidth="94.0" text="Codigo" />
+                      <TreeTableColumn fx:id="tableColumnNombre" prefWidth="252.0" text="Nombre" />
+                        <TreeTableColumn fx:id="tableColumnTalla" prefWidth="116.0" text="Talla" />
+                        <TreeTableColumn fx:id="tableColumnUbicacion" prefWidth="68.0" text="Ubicación" />
+                        <TreeTableColumn fx:id="tableColumnGenero" prefWidth="48.0" text="Genero" />
+                        <TreeTableColumn fx:id="tableColumnFamilia" prefWidth="116.0" text="Familia" />
+                        <TreeTableColumn fx:id="tableColumnNroPiezas" prefWidth="115.0" text="Nro Piezas" />
+                        <TreeTableColumn fx:id="tableColumnStock" prefWidth="94.0" text="Stock" />
+                        <TreeTableColumn fx:id="tableColumnPreCompra" prefWidth="94.0" text="Precio Compra" />
+                        <TreeTableColumn fx:id="tableColumnPreAlquiler" prefWidth="94.0" text="Precio Alquiler" />
+                        <TreeTableColumn fx:id="tableColumnPreVenta" prefWidth="94.0" text="Precio Venta" />
+                        <TreeTableColumn fx:id="tableColumnReqPlanchar" prefWidth="94.0" text="Req. Planchar" />
+                        <TreeTableColumn fx:id="tableColumnTipoMant" prefWidth="94.0" text="Tipo Mant." />
+                        <TreeTableColumn fx:id="tableColumnLavanderiaCant" prefWidth="75.0" text="Lavanderia" />
+                        <TreeTableColumn fx:id="tableColumnReparacionCant" prefWidth="75.0" text="Reparación" />
+                        <TreeTableColumn fx:id="tableColumnPlanchadoCant" prefWidth="75.0" text="Planchado" />
+                        <TreeTableColumn fx:id="tableColumnEsperaCant" prefWidth="75.0" text="Espera" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenuOpcionesTabla">
+                           <items>
+                              <MenuItem fx:id="menuItemActualizarArticuloPieza" mnemonicParsing="false" text="Actualizar Artículo" />
+                           </items></ContextMenu>
+                     </contextMenu>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TreeTableView>
+               </center>
+            </BorderPane>
+         </center>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </center>
+</BorderPane>

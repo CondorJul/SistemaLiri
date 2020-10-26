@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="115.0" spacing="3.0" type="HBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="jFXButtonVer" text=" " textFill="#005eff">
+         <graphic>
+            <FontAwesomeIconView fill="#064fd7" glyphName="EYE" size="20" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="jFXButtonEditar" text=" ">
+         <graphic>
+            <FontAwesomeIconView fill="#298d1b" glyphName="EDIT" size="20" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="jFXButtonEliminar" text=" ">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="TRASH" size="20" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="jFXButtonAgregar" textFill="#220046">
+         <graphic>
+            <FontAwesomeIconView fill="#5c008a" glyphName="PLUS" size="20" />
+         </graphic>
+         <font>
+            <Font />
+         </font>
+      </JFXButton>
+   </children>
+</fx:root>

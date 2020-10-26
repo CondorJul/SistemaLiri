@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.perfil.CPerfil">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="28.0" prefWidth="1000.0" style="-fx-background-color: #f16a1b;" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Mis Datos" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="15.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="15.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <BorderPane prefHeight="477.0" prefWidth="680.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0, 1.5); -fx-background-color: white; -fx-background-radius: 5 5 5 5;" BorderPane.alignment="CENTER">
+                     <top>
+                        <BorderPane prefHeight="70.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="EDIT" size="25" />
+                                    <Label id="tipoLetra1" text="Editar mis Datos">
+                                       <font>
+                                          <Font name="Cambria Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXCheckBox fx:id="jfxCheckBox" prefHeight="25.0" prefWidth="25.0" text=" " />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </center>
+                           <bottom>
+                              <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </BorderPane.margin>
+                              </Separator>
+                           </bottom>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="118.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <GridPane alignment="CENTER" prefHeight="402.0" prefWidth="482.0" BorderPane.alignment="CENTER">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="0.0" prefWidth="209.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" prefWidth="296.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane prefHeight="84.0" prefWidth="180.0">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="DNI :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <center>
+                                          <TextField fx:id="textFieldDni" disable="true" editable="false" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Apellidos y Nombres :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <center>
+                                          <TextField fx:id="textFieldApellidosNombres" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Dirección : " BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <center>
+                                          <TextField fx:id="textFieldDireccion" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Telefono :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <center>
+                                          <TextField fx:id="textFieldTelefono" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Correo :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Cargo :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <right>
+                                          <Label id="labelTipoLetra" text="Salario :" BorderPane.alignment="CENTER" />
+                                       </right>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <center>
+                                          <TextField fx:id="textFieldCorreo" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <center>
+                                          <TextField fx:id="textFieldCargo" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <center>
+                                          <TextField fx:id="textFieldSalario" disable="true" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </GridPane>
+                           </center>
+                           <right>
+                              <BorderPane prefHeight="402.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="labelTipoLetra" text="Foto de Perfil" />
+                                          <ImageView fx:id="imageViewFotoPerfil" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Hyperlink fx:id="hyperlinkSubirFoto" disable="true" text="Subir Foto" />
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+                                             <children>
+                                                <Label id="labelTipoLetra" text="Estado :" />
+                                                <Label fx:id="labelEstado" text="." />
+                                             </children>
+                                          </HBox>
+                                          <Hyperlink fx:id="hyperlinkCambiarContraseña" disable="true" text="Cambiar Contraseña" />
+                                       </children>
+                                    </VBox>
+                                 </center>
+                              </BorderPane>
+                           </right>
+                        </BorderPane>
+                     </center>
+                     <bottom>
+                        <BorderPane prefHeight="70.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="35.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="jfxButtonGuardar" disable="true" prefHeight="34.0" prefWidth="156.0" style="-fx-background-color: #4cae4c;" text="Guardar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20.0" wrappingWidth="20.428571701049805" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></HBox>
+                           </center>
+                           <top>
+                              <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </BorderPane.margin>
+                              </Separator>
+                           </top>
+                        </BorderPane>
+                     </bottom>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </BorderPane>
+               </center>
+               <left>
+                  <AnchorPane prefHeight="552.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <AnchorPane prefHeight="552.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </center>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </BorderPane>
+   </center>
+</BorderPane>

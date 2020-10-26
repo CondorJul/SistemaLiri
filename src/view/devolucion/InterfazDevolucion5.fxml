@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <JFXTabPane styleClass="specialJFXTabPane" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Nuevo Devolucion">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane hgap="5.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="520.0" prefWidth="168.0" GridPane.columnSpan="2" GridPane.rowSpan="5">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane hgap="2.0" layoutX="80.0" layoutY="32.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 1 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic1" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 2 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic2" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 3 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic3" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Devoluciones Pendientes" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                              <BorderPane prefHeight="154.0" prefWidth="209.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="3">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane hgap="2.0" layoutX="80.0" layoutY="32.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 1 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic12" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 2 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic22" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 3 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic31" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Detalle Artículos/Piezas " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                              <BorderPane prefHeight="6.0" prefWidth="327.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowSpan="5">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane hgap="2.0" layoutX="80.0" layoutY="32.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 1 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic11" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 2 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic21" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Devolución" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                              <BorderPane prefHeight="154.0" prefWidth="209.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="2">
+                                 <center>
+                                    <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane hgap="2.0" layoutX="80.0" layoutY="32.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 1 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic121" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 2 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic221" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                   <bottom>
+                                                      <Label id="labelTipoLetra" text="Dato Adicional 3 :" BorderPane.alignment="CENTER_LEFT" />
+                                                   </bottom>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <center>
+                                                      <TextField fx:id="textFieldDatoAdic311" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label id="tabPaneLetra" contentDisplay="CENTER" text="Piezas" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Lista de Devoluciones">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <BorderPane prefHeight="38.0" prefWidth="980.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="textFieldBuscarAlquiler" prefWidth="250.0" promptText="Buscar  Devoluciones Codigo o DNI" style="-fx-border-color: #1c99dd; -fx-border-radius: 5 0 0 5; -fx-padding: 3;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button id="agregar" mnemonicParsing="false" prefWidth="35.0" style="-fx-background-color: blue; -fx-padding: 3;" textFill="WHITE">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </center>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TreeTableView fx:id="treeTableViewAlquiler" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TreeTableColumn fx:id="tableColumnCodigo" prefWidth="94.0" text="Codigo" />
+                                        <TreeTableColumn fx:id="tableColumnNombre" prefWidth="230.0" text="Nombre" />
+                                          <TreeTableColumn fx:id="tableColumnFamilia" prefWidth="108.0" text="Familia" />
+                                          <TreeTableColumn fx:id="tableColumnStock" prefWidth="94.0" text="Stock" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </center>
+                              </BorderPane>
+                           </center>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </BorderPane.margin>
+                        </BorderPane>
+                     </center></BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>

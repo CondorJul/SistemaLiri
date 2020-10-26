@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1300.0" styleClass="specialJFXTabPane" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.alquiler.CAlquiler">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Nueva Transacción">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.8" layoutX="390.0" layoutY="151.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <content>
+                                        <AnchorPane minHeight="1800.0" minWidth="720.0" prefHeight="1800.0" prefWidth="593.0">
+                                             <children>
+                                                <BorderPane prefHeight="242.0" prefWidth="865.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="863.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane hgap="10.0" layoutX="21.0" layoutY="14.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                                     <right>
+                                                                        <Label id="labelTipoLetra" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="158.0" text="Código/DNI :" BorderPane.alignment="CENTER" />
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                                     <center>
+                                                                        <TextField fx:id="textFieldCodigoCliente" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                     <right>
+                                                                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="54.0" BorderPane.alignment="CENTER">
+                                                                           <children>
+                                                                              <Button fx:id="buttonBuscarCliente" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#01b907" glyphName="SEARCH" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                              <Button fx:id="buttonEliminarCliente" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#cd0000" glyphName="CLOSE" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" text="Código :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldCodigo" prefHeight="10.0" prefWidth="375.0" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Apellidos y Nombres :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldApellidosNombres" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Dirección :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldDireccion" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Referencia :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldReferencia" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="DNI :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldDNI" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="Correo Electrónico :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldCorreo" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                                     <left>
+                                                                        <Label id="labelTipoLetra" prefHeight="15.0" text="N° Telefono :" BorderPane.alignment="CENTER" />
+                                                                     </left>
+                                                                     <center>
+                                                                        <JFXTextField fx:id="jFXTextFieldTelefono" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                  </BorderPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="213.0" prefWidth="730.0" style="-fx-border-color: #02aaff;" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="370.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <TableView fx:id="tableViewArticulos" prefHeight="198.0" prefWidth="724.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="tableColumnNroArticulos" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="#" />
+                                                                <TableColumn fx:id="tableColumnCantArticulos" maxWidth="70.0" minWidth="50.0" prefWidth="70.0" text="Cant" />
+                                                                  <TableColumn fx:id="tableColumnDescripcionArticulos" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" text="Descripcion de Articulo" />
+                                                                  <TableColumn fx:id="tableColumnPrecioArticulos" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="P. Articulo" />
+                                                                  <TableColumn fx:id="tableColumnImporteArticulos" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Importe" />
+                                                                  <TableColumn fx:id="tableColumnEliminarArticulos" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
+                                                              </columns>
+                                                               <columnResizePolicy>
+                                                                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                               </columnResizePolicy>
+                                                            </TableView>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                   <top>
+                                                      <BorderPane prefHeight="22.0" prefWidth="728.0" style="-fx-background-color: #02aaff;" BorderPane.alignment="CENTER">
+                                                         <left>
+                                                            <Label text="  Lista de Articulos a ser Alquilados / Vendidos" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </left>
+                                                      </BorderPane>
+                                                   </top>
+                                                </BorderPane>
+                                                <BorderPane layoutX="23.0" layoutY="784.0" prefHeight="149.0" prefWidth="760.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="-13.0">
+                                                   <right>
+                                                      <GridPane prefHeight="149.0" prefWidth="305.0" vgap="2.0" BorderPane.alignment="CENTER">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <TextField fx:id="textFieldSubTotal" GridPane.columnIndex="1" />
+                                                            <TextField fx:id="textFieldDesCupones" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField fx:id="textFieldDesAdicional" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField fx:id="textFieldTotalPagar" prefHeight="9.0" prefWidth="147.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" />
+                                                               </children>
+                                                            </HBox>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <left>
+                                                                  <Label text="Total a Pagar" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </left>
+                                                               <right>
+                                                                  <Label text="S/ :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <left>
+                                                                  <Label prefHeight="19.0" prefWidth="72.0" text="SubTotal :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </left>
+                                                               <right>
+                                                                  <Label prefHeight="19.0" text=" S/ :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <left>
+                                                                  <Label text="Descuento de Cupones " BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </left>
+                                                               <right>
+                                                                  <Label text="S/ :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <left>
+                                                                  <Label text="Descuento Adicional " BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </left>
+                                                               <right>
+                                                                  <Label text="S/ :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </right>
+                                                   <left>
+                                                      <GridPane prefHeight="149.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="138.0" text="Cupones de Descuento :" GridPane.columnSpan="2">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font></Label>
+                                                            <JFXCheckBox fx:id="jFXCheckBoxCupon1" text="Cupón 1 (10%)" GridPane.rowIndex="1" />
+                                                            <JFXCheckBox fx:id="jFXCheckBoxCupon2" text="Cupón 2 (10%)" GridPane.rowIndex="2" />
+                                                            <JFXCheckBox fx:id="jFXCheckBoxCupon3" text="Cupón 3 (10%)" GridPane.rowIndex="3" />
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="169.0" text="Descuento Adicional:" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                                               <children>
+                                                                  <JFXRadioButton fx:id="jFXRadioButtonDesNinguno" selected="true" text="Ninguno">
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="groupDesAdic" />
+                                                                     </toggleGroup></JFXRadioButton>
+                                                                  <JFXRadioButton fx:id="jFXRadioButtonDesSoles" text="(S/ )" toggleGroup="$groupDesAdic" />
+                                                                  <JFXRadioButton fx:id="jFXRadioButtonDesPor" text="(%)" toggleGroup="$groupDesAdic" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="2.0" GridPane.rowIndex="6">
+                                                               <padding>
+                                                                  <Insets top="2.0" />
+                                                               </padding>
+                                                               <children>
+                                                                  <Label fx:id="labelDescuentoEn" alignment="CENTER_RIGHT" lineSpacing="3.0" text="Descuento en (S/) " />
+                                                               </children>
+                                                            </HBox>
+                                                            <Spinner fx:id="spinnerDesMonPor" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutX="12.0" layoutY="556.0" prefHeight="183.0" prefWidth="730.0" style="-fx-border-color: #02aaff;" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="595.0">
+                                                   <center>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane hgap="2.0" layoutX="21.0" layoutY="14.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <TableView fx:id="tableViewPiezas" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="6">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="tableColumnSeleccionPiezas" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                                                                        <TableColumn fx:id="tableColumnNroPiezas" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="#" />
+                                                                        <TableColumn fx:id="tableColumnCantPiezas" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Cant" />
+                                                                        <TableColumn fx:id="tableColumnDescripcionPiezas" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="436.0" text="Descripción de la Pieza" />
+                                                                        <TableColumn fx:id="tableColumnPrecioPiezas" maxWidth="176.0" minWidth="100.0" prefWidth="100.0" text="P.Pieza" />
+                                                                        <TableColumn fx:id="tableColumnImportePiezas" maxWidth="120.0" minWidth="64.0" prefWidth="64.0" text="Importe" />
+                                                                     </columns>
+                                                                     <columnResizePolicy>
+                                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                     </columnResizePolicy>
+                                                                  </TableView>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane fx:id="boderPaneBodyGarantia" layoutX="5.0" layoutY="989.0" prefHeight="227.0" prefWidth="760.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="989.0">
+                                                   <left>
+                                                      <GridPane prefHeight="227.0" prefWidth="375.0" vgap="2.0" BorderPane.alignment="CENTER">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="68.0" prefWidth="109.0" text="Tipo de Garantia :">
+                                                               <font>
+                                                                  <Font name="System Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXCheckBox fx:id="jFXCheckBoxDniGarantia" text="DNI" GridPane.rowIndex="1" />
+                                                            <JFXCheckBox fx:id="jFXCheckBoxLicenciaGarantia" text="Licencia" GridPane.rowIndex="3" />
+                                                            <JFXCheckBox fx:id="jFXCheckBoxDineroGarantia" text="Dinero" GridPane.rowIndex="4" />
+                                                            <JFXCheckBox fx:id="jFXCheckBoxDniMenorGarantia" text="DNI Menor Edad" GridPane.rowIndex="2" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNroDniGarantia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <right>
+                                                                  <Label text="Nro DNI :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNroMenorGarantia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <right>
+                                                                  <Label text="Nro DNI :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                               <right>
+                                                                  <Label text="Monto (S/) :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                               <right>
+                                                                  <Label text="Nro Licencia :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNroLicenciaGarantia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <TextField fx:id="textFieldDineroGarantia" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="62.0" prefWidth="123.0" text="Otro Tipo de Garantia" GridPane.rowIndex="5">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXCheckBox fx:id="jFXTextFieldOtroGarantia" text="Otro (Especifique)" GridPane.rowIndex="6" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
+                                                               <center>
+                                                                  <TextArea fx:id="textAreaOtroGarantia" prefHeight="78.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                               <left>
+                                                                  <Label text="   " BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </left>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                   <right>
+                                                      <GridPane prefHeight="227.0" prefWidth="320.0" vgap="2.0" BorderPane.alignment="CENTER">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="384.0" text="Boleta como Garantia" GridPane.columnSpan="2">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <Button fx:id="buttonEnlazarBoleta" alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="232.0" text="Enlazar Boleta" BorderPane.alignment="CENTER">
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView fill="#ff4400" glyphName="LINK" size="18" />
+                                                                     </graphic>
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                     <BorderPane.margin>
+                                                                        <Insets />
+                                                                     </BorderPane.margin>
+                                                                  </Button>
+                                                               </center>
+                                                               <right>
+                                                                  <Button fx:id="buttonEliminarEnlazarBoleta" mnemonicParsing="false" prefHeight="41.0" prefWidth="29.0" BorderPane.alignment="CENTER">
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView fill="#cd0000" glyphName="CLOSE" size="16" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </right>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNroBoletaGarantia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <JFXCheckBox fx:id="jFXTextFieldBoletaAlqGarantia" text="Boleta de Alquiler" GridPane.rowIndex="1" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <right>
+                                                                  <Label text="Nro :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <right>
+                                                                  <Label text="Serie :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                               <center>
+                                                                  <TextField fx:id="textFieldSerieBoletaGarantia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="0.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </right>
+                                                </BorderPane>
+                                                <BorderPane layoutX="28.0" layoutY="-20.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+                                                   <left>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="239.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="35" />
+                                                            <Label text=" 1. DATOS DE CLIENTE" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutX="93.0" layoutY="269.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="320.0">
+                                                   <left>
+                                                      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                               <left>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="33" BorderPane.alignment="CENTER" />
+                                                               </left>
+                                                               <right>
+                                                                  <Label text=" 2. CARRITO DE ALQUILER" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <Label alignment="CENTER" layoutX="-86.0" layoutY="461.0" prefHeight="31.0" prefWidth="213.0" rotate="-90.0" style="-fx-background-color: #02aaff;" text="ARTÍCULOS" textFill="#fcfcfc">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="-69.0" layoutY="671.0" prefHeight="31.0" prefWidth="183.0" rotate="-90.0" style="-fx-background-color: #02aaff;" text="PIEZAS POR ARTÍCULO" textFill="#fcfcfc">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <BorderPane layoutY="952.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <left>
+                                                      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                               <left>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="33" BorderPane.alignment="CENTER" />
+                                                               </left>
+                                                               <right>
+                                                                  <Label text=" 3. GARANTIA " textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane fx:id="boderPaneBodyRecomendacion" layoutX="5.0" layoutY="1270.0" prefHeight="103.0" prefWidth="760.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                   <left>
+                                                      <GridPane prefHeight="200.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="68.0" prefWidth="120.0" text="Recomendado por :">
+                                                               <font>
+                                                                  <Font name="System Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <right>
+                                                                  <Label prefHeight="17.0" prefWidth="54.0" text=" Codigo :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                     <center>
+                                                                        <TextField fx:id="textFieldCodigoClienteRecome" BorderPane.alignment="CENTER" />
+                                                                     </center>
+                                                                     <right>
+                                                                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="54.0" BorderPane.alignment="CENTER">
+                                                                           <children>
+                                                                              <Button fx:id="buttonBuscarClienteRecome" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#01b907" glyphName="SEARCH" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                              <Button fx:id="buttonEliminarClienteRecomen" mnemonicParsing="false">
+                                                                                 <graphic>
+                                                                                    <FontAwesomeIconView fill="#cd0000" glyphName="CLOSE" size="16" />
+                                                                                 </graphic>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </HBox>
+                                                                     </right>
+                                                                  </BorderPane>
+                                                               </center>
+                                                            </BorderPane>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Label prefHeight="17.0" text="Nombre">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label text="Ricardo Jesus Solis Almerco" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                               <children>
+                                                                  <Label prefHeight="17.0" text="Reputación:  ">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label text="Ricardo Jesus Solis Almerco" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutY="1230.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <left>
+                                                      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                               <left>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="33" BorderPane.alignment="CENTER" />
+                                                               </left>
+                                                               <right>
+                                                                  <Label text=" 4. RECOMENDACIÓN" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutY="1550.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <left>
+                                                      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                               <left>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="33" BorderPane.alignment="CENTER" />
+                                                               </left>
+                                                               <right>
+                                                                  <Label text=" 6. DEVOLUCIÓN" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane fx:id="boderPaneBodyDevolucion" layoutX="5.0" layoutY="1598.0" prefHeight="83.0" prefWidth="760.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                   <left>
+                                                      <GridPane prefHeight="200.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="68.0" prefWidth="120.0" text="Fecha de Entrega :">
+                                                               <font>
+                                                                  <Font name="System Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                               <center>
+                                                                  <DatePicker fx:id="datePickerFechaEntrega" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="214.0" text="Fecha de Devolución :" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font name="System Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <DatePicker fx:id="datePickerFechaDevolucion" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutY="1681.0" prefHeight="19.0" prefWidth="760.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <center>
+                                                      <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane layoutY="1714.0" prefHeight="48.0" prefWidth="377.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                   <right>
+                                                      <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="391.0" spacing="3.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <JFXButton fx:id="jFXButtonReservar" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #ffa400;" text="Reservar" textFill="WHITE">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="18" />
+                                                               </graphic>
+                                                               <font>
+                                                                  <Font name="System Bold" size="14.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <JFXButton fx:id="jFXButtonEfectuarOperacion" prefHeight="35.0" prefWidth="182.0" style="-fx-background-color: #0ebf0b;" text="Efectuar Operación" textFill="WHITE">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="18" />
+                                                               </graphic>
+                                                               <font>
+                                                                  <Font name="System Bold" size="14.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </right>
+                                                </BorderPane>
+                                                <BorderPane layoutX="68.0" layoutY="-71.0" prefHeight="40.0" prefWidth="737.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <right>
+                                                      <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="314.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <ToggleButton id="toggleButtonAlquiler" fx:id="toggleButtonAlquiler" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" selected="true" text="Alquiler">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="grupoTipoOperacion" />
+                                                               </toggleGroup>
+                                                            </ToggleButton>
+                                                            <ToggleButton id="toggleButtonVenta" fx:id="toggleButtonVenta" mnemonicParsing="false" prefHeight="45.0" prefWidth="137.0" text="Venta" toggleGroup="$grupoTipoOperacion" />
+                                                         </children>
+                                                      </HBox>
+                                                   </right>
+                                                   <left>
+                                                      <Label id="labelOpcSelect" text="Alquiler" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane layoutY="1388.0" prefHeight="40.0" prefWidth="770.0" style="-fx-background-color: #28AAF1;">
+                                                   <left>
+                                                      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="39.0" prefWidth="162.0">
+                                                               <left>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="33" BorderPane.alignment="CENTER" />
+                                                               </left>
+                                                               <right>
+                                                                  <Label prefHeight="27.0" prefWidth="190.0" text=" 5. SEPARARADO" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </left>
+                                                </BorderPane>
+                                                <BorderPane fx:id="boderPaneBodyDevolucion1" layoutY="1428.0" prefHeight="103.0" prefWidth="760.0" AnchorPane.leftAnchor="0.0">
+                                                   <left>
+                                                      <GridPane prefHeight="200.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <left>
+                                                                  <JFXCheckBox fx:id="jFXCheckBoxDniGarantia1" prefHeight="17.0" prefWidth="120.0" text="Separar" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="13.0" />
+                                                                     </font>
+                                                                  </JFXCheckBox>
+                                                               </left>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <right>
+                                                                  <Label text="Fecha de Recojo :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <right>
+                                                                  <Label text="A  cuenta (S/) :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <right>
+                                                                  <Label text="Saldo (S/) :" BorderPane.alignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </right>
+                                                            </BorderPane>
+                                                            <TextField fx:id="textFieldDineroGarantia1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField fx:id="textFieldDineroGarantia11" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </left>
+                                                </BorderPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane minWidth="500.0" prefHeight="200.0" prefWidth="500.0">
+                                 <center>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="500.0" prefHeight="556.0" prefWidth="559.0">
+                                             <children>
+                                                <TableView fx:id="tableViewArticulos" layoutY="55.0" prefHeight="1086.0" prefWidth="474.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="tableColumnNro" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="#" />
+                                                      <TableColumn prefWidth="75.0" text="Descripción">
+                                                         <columns>
+                                                          <TableColumn fx:id="tableColumnDescripcionArticulo" minWidth="100.0" prefWidth="300.0" text="Artículo" />
+                                                            <TableColumn fx:id="tableColumnDescripcionPiezas" minWidth="100.0" prefWidth="300.0" text="Piezas" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Talla/Género">
+                                                         <columns>
+                                                            <TableColumn fx:id="tableColumnTallla" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Talla" />
+                                                            <TableColumn fx:id="tableColumnGenero" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Género" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn maxWidth="800.0" minWidth="262.0" prefWidth="262.0" text="Precios (S/)">
+                                                         <columns>
+                                                            <TableColumn fx:id="tableColumnPrecioCompra" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Compra" />
+                                                            <TableColumn fx:id="tableColumnPrecioAlquiler" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Alquiler" />
+                                                            <TableColumn fx:id="tableColumnPrecioVenta" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Venta" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                      <TableColumn fx:id="tableColumnStock" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Stock" />
+                                                      <TableColumn fx:id="tableColumnAgregar" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Agregar" />
+                                                  </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                                <BorderPane layoutX="14.0" layoutY="-30.0" prefHeight="34.0" prefWidth="464.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                                                   <right>
+                                                      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <FontAwesomeIconView glyphName="SEARCH" size="25">
+                                                               <effect>
+                                                                  <Blend mode="MULTIPLY" />
+                                                               </effect>
+                                                            </FontAwesomeIconView>
+                                                            <TextField fx:id="textFieldBuscarProductos" />
+                                                         </children>
+                                                      </HBox>
+                                                   </right>
+                                                   <left>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                                   </left>
+                                                </BorderPane>
+                                                <TreeTableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+                                                  <columns>
+                                                      <TreeTableColumn maxWidth="85.0" minWidth="85.0" prefWidth="85.0" text="Código" />
+                                                    <TreeTableColumn minWidth="100.0" prefWidth="250.0" text="Descripción (Artículo/Pieza)" />
+                                                      <TreeTableColumn prefWidth="75.0" text="Talla/Genero">
+                                                         <columns>
+                                                            <TreeTableColumn maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Talla" />
+                                                          <TreeTableColumn maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Género" />
+                                                         </columns>
+                                                      </TreeTableColumn>
+                                                      <TreeTableColumn prefWidth="75.0" text="Precios (S/)">
+                                                         <columns>
+                                                            <TreeTableColumn prefWidth="75.0" text="Compra" />
+                                                            <TreeTableColumn prefWidth="75.0" text="Alquiler" />
+                                                            <TreeTableColumn prefWidth="75.0" text="Venta" />
+                                                         </columns>
+                                                      </TreeTableColumn>
+                                                      <TreeTableColumn prefWidth="75.0" text="Stock" />
+                                                      <TreeTableColumn prefWidth="75.0" text="Agregar" />
+                                                  </columns>
+                                                </TreeTableView>
+                                             </children></AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                              </BorderPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Lista de alquileres">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <BorderPane prefHeight="49.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <BorderPane prefHeight="21.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                                 <left>
+                                    <TextField fx:id="textFieldBuscarAlquiler" prefHeight="36.0" prefWidth="309.0" promptText="Buscar  Articulos Alquilados" style="-fx-border-color: #1c99dd; -fx-border-radius: 5;" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <BorderPane.margin>
+                                          <Insets right="-4.0" />
+                                       </BorderPane.margin>
+                                    </TextField>
+                                 </left>
+                                 <right>
+                                    <Button id="agregar" mnemonicParsing="false" prefHeight="35.0" prefWidth="43.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="23" />
+                                       </graphic>
+                                    </Button>
+                                 </right>
+                                 <BorderPane.margin>
+                                    <Insets left="15.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </left>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TreeTableView fx:id="treeTableViewAlquiler" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TreeTableColumn fx:id="tableColumnCodigo" prefWidth="94.0" text="Codigo" />
+                                        <TreeTableColumn fx:id="tableColumnNombre" prefWidth="230.0" text="Nombre" />
+                                          <TreeTableColumn fx:id="tableColumnFamilia" prefWidth="108.0" text="Familia" />
+                                          <TreeTableColumn fx:id="tableColumnStock" prefWidth="94.0" text="Stock" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </center>
+                              </BorderPane>
+                           </center>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </BorderPane.margin>
+                        </BorderPane>
+                     </center></BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>

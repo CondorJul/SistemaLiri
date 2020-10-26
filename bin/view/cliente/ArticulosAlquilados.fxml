@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cliente.CArticulosAlquilados">
+   <children>
+      <AnchorPane id="anchorPaneFondo" layoutX="7.0" layoutY="7.0" prefHeight="470.0" prefWidth="870.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <BorderPane prefHeight="40.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img1/recibo3.png" />
+                                 </image></ImageView>
+                              <Label id="tipoLetra1" text="Historial de Artículos  Alquilados" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </bottom>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="35.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonCerrar" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: none;" text="X" textFill="RED">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="318.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </BorderPane.margin>
+                     <center>
+                        <BorderPane prefHeight="178.0" prefWidth="478.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane id="tabPaneEstilo2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane minHeight="400.0" prefWidth="726.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="43.0" minHeight="9.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints minHeight="10.0" prefHeight="70.0" />
+                                                <RowConstraints minHeight="10.0" prefHeight="70.0" />
+                                                <RowConstraints minHeight="10.0" prefHeight="90.0" />
+                                            </rowConstraints>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <center>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <TextField fx:id="textFieldBuscarArticulosAlquilados" prefHeight="30.0" prefWidth="437.0" promptText="Buscar" />
+                                                            <Button id="agregar" mnemonicParsing="false" prefHeight="29.0" prefWidth="43.0" textFill="WHITE" translateX="-4.0">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="17" />
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                   </center>
+                                                </BorderPane>
+                                                <BorderPane prefHeight="200.0" prefWidth="722.0" GridPane.rowIndex="1" GridPane.rowSpan="6">
+                                                   <center>
+                                                      <TableView fx:id="tableViewClienteArticulosAlquilados" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                                                         <columns>
+                                                            <TableColumn fx:id="tableColumnIdBoleta" maxWidth="100.0" prefWidth="30.0" text="#" visible="false" />
+                                                            <TableColumn fx:id="tableColumnSerieNroBoleta" maxWidth="1000.0" minWidth="80.0" prefWidth="150.0" text="Boleta" />
+                                                            <TableColumn fx:id="tableColumnFecha" maxWidth="3000.0" prefWidth="120.0" text="Fecha" />
+                                                            <TableColumn fx:id="tableColumnCantidad" maxWidth="600.0" minWidth="50.0" prefWidth="106.0" text="Cantidad" />
+                                                            <TableColumn fx:id="tableColumnCodigo" maxWidth="500.0" minWidth="80.0" prefWidth="100.0" text="Codigo" />
+                                                            <TableColumn fx:id="tableColumnDescripcion" maxWidth="3000.0" minWidth="100.0" prefWidth="200.0" text="Descripcion / Articulo Alquilado" />
+                                                            <TableColumn fx:id="tableColumnPrecioUnit" maxWidth="1000.0" minWidth="50.0" prefWidth="70.0" text="Precio Unit." />
+                                                            <TableColumn fx:id="tableColumnImporte" maxWidth="1000.0" minWidth="50.0" prefWidth="70.0" text="Importe" />
+                                                            <TableColumn fx:id="tableColumnImpDesct" maxWidth="2000.0" text="Imp. c/ Desct." />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </center>
+                                                   <bottom>
+                                                      <VBox prefHeight="79.0" prefWidth="742.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <BorderPane prefHeight="25.0" prefWidth="200.0">
+                                                               <top>
+                                                                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                     <BorderPane.margin>
+                                                                        <Insets top="3.0" />
+                                                                     </BorderPane.margin>
+                                                                  </Separator>
+                                                               </top>
+                                                               <right>
+                                                                  <Label id="pago" fx:id="labelMontoTotalSinDesc" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #007CCF; -fx-text-fill: white;" text="00.00" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets right="5.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </right>
+                                                               <left>
+                                                                  <Label id="pago" prefHeight="20.0" prefWidth="678.0" style="-fx-background-color: #007CCF; -fx-text-fill: white;" text="Total a Facturar sin Descuento     S/" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </left>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="25.0" prefWidth="200.0">
+                                                               <top>
+                                                                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                     <BorderPane.margin>
+                                                                        <Insets top="3.0" />
+                                                                     </BorderPane.margin>
+                                                                  </Separator>
+                                                               </top>
+                                                               <right>
+                                                                  <Label id="pago" fx:id="labelMontoTotalConDesc" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #10CF00; -fx-text-fill: white;" text="00.00" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets right="5.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </right>
+                                                               <left>
+                                                                  <Label id="pago" prefHeight="20.0" prefWidth="679.0" style="-fx-background-color: #10CF00; -fx-text-fill: white;" text="Total Facturado con Descuento    S/" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </left>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="25.0" prefWidth="200.0">
+                                                               <top>
+                                                                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                     <BorderPane.margin>
+                                                                        <Insets top="3.0" />
+                                                                     </BorderPane.margin>
+                                                                  </Separator>
+                                                               </top>
+                                                               <right>
+                                                                  <Label id="pago" fx:id="labelMontoTotalDiferencia" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #FFAE00; -fx-text-fill: white;" text="00.00" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets right="5.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </right>
+                                                               <left>
+                                                                  <Label id="pago" prefHeight="20.0" prefWidth="679.0" style="-fx-background-color: #FFAE00; -fx-text-fill: white;" text="Total de Diferencia                         S/" BorderPane.alignment="CENTER">
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </left>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </bottom>
+                                                </BorderPane>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                           </center>
+                           <top>
+                              <AnchorPane id="tabPaneEstilo1" prefHeight="20.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label id="tabPaneLetra" contentDisplay="CENTER" text="Listado de Historial de Articulos Alquilados" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets left="4.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </top>
+                           <BorderPane.margin>
+                              <Insets bottom="4.0" left="2.0" top="4.0" />
+                           </BorderPane.margin>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

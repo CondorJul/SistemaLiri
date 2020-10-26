@@ -1,0 +1,329 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.labelInformacioncorrecto{
+	-fx-font-family: "Arial Narrow";
+	-fx-text-fill: #25b2f8;
+	-fx-font-size: 16px;
+   	-fx-font-weight: bold;
+	-fx-background-color: rgba(93, 194, 252 , 0.30);
+	-fx-background-radius: 3 3 3 3;
+	
+}
+
+.labelInformacionincorrecto{
+	-fx-font-family: "Arial Narrow";
+	-fx-font-size: 16px;
+	-fx-text-fill: #FF0000;
+   	-fx-font-weight: bold;
+	-fx-background-color: rgba(250, 43, 43 , 0.30);
+	-fx-background-radius: 3 3 3 3;	
+}
+
+#anchorPaneFondo{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius: 10px;
+	-fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.9), 15, 0, 3, 3);
+}
+
+#anchorPaneModal{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius:3;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.9), 15, 0, 3, 3);
+}
+
+#tipoLetra{
+	-fx-font: bold italic 50pt Arial;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 14px;
+}
+
+#tipoLetra1{
+	-fx-font: bold italic 50pt Arial;
+	-fx-text-fill: #2600ff;
+	-fx-font-size: 18px;
+}
+
+#menuFondo{
+	-fx-background-color:  #1c99dd;
+}
+
+#toggleButtonOpcionesMenu{
+	-fx-cursor:hand;
+	-fx-background-color:   #1c99dd;
+}
+
+#toggleButtonOpcionesMenu:hover {
+	-fx-border-color: transparent ;
+	-fx-border-width: 0px 0px 0px 4px;
+}
+
+#toggleButtonOpcionesMenu:selected{
+	-fx-background-color: #1a7eb5;
+	-fx-border-color: transparent;
+	-fx-border-width: 0px 0px 0px 4px;
+}
+
+#stackPaneFodoSemiTransparente{
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+#agregar{
+	-fx-background-color: #0033FF;
+}
+
+#botonGuardar{
+	-fx-background-color:  #4cae4c;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 15px;
+	-fx-text-fill: #ffffff;
+}
+
+#botonCancelar{
+	-fx-background-color: #f44336;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 15px;
+}
+
+#botonLimpiar{
+	-fx-background-color: #f44336;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 15px;
+}
+
+#tabPaneEstilo1{
+	-fx-border-color:  #3778DC;
+	-fx-border-radius: 5 5 0 0;
+}
+
+#tabPaneEstilo2{
+	-fx-border-color:  #3778DC;
+	-fx-border-radius: 0 0 5 5;
+}
+
+#tabPaneLetra{
+	-fx-background-color: #3778DC;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 14px;
+	-fx-text-fill: #ffffff;
+}
+
+#labelTipoLetra{
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 12px;
+	-fx-text-fill: #282626;
+}
+
+.specialJFXTabPane .tab-header-area .tab-header-background {
+    /*-fx-opacity: 0.0;*/
+    -fx-background-color: #f16a1b;  	    
+}
+
+.specialJFXTabPane .tab-header-area .jfx-rippler{
+    -fx-rippler-fill: firebrick;
+    -fx-cursor:hand;
+}
+
+.specialJFXTabPane .tab-header-area  .tab-selected-line{
+     -fx-stroke: firebrick ;
+}
+
+.specialJFXTabPane .tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 13.5px; /* before it was 12px */
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-cursor:hand;
+}
+
+.specialJFXTabPane .tab:hover .tab-label{
+	-fx-text-fill:white;
+	-fx-background-color:#FF8000;	
+	-fx-background-radius: 0.0;
+}
+
+.specialJFXTabPane .tab:selected .tab-label{
+	-fx-background-color:#FFFFFF27;
+}
+
+.tree-cell:company {
+	-fx-background: paleturquoise ;
+}
+
+.tree-cell:department {
+	-fx-background: honeydew ;
+}
+
+.tree-cell:employee {
+	-fx-background: powderblue ;
+}
+
+.tree-cell:role {
+	-fx-background: lightcyan ;
+}
+
+.tree-cell:filled:hover {
+	-fx-background-color: forestgreen, -fx-background ;
+	-fx-background-insets: 0,2 ;
+}
+
+.tree-cell:filled:selected {
+	-fx-background: forestgreen ;
+}
+
+
+
+
+#labelOpcSelect{
+	-fx-font-weight: 700;
+	-fx-font-size: 24px;
+	-fx-text-fill:   #28AAF1;
+}
+
+#toggleButtonAlquiler, #toggleButtonVenta{
+	
+	-fx-border-width: 0px 0px 2px 0px;
+	-fx-border-color:  #28AAF1;
+	-fx-border-radius: 0px;
+	-fx-background-radius: 0px;
+	-fx-background-color: transparent ;
+	-fx-cursor: hand;
+	-fx-padding: 20px 15px 5px 15px;
+	-fx-font-weight:700;
+	-fx-font-size: 12px;
+	-fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	-fx-text-fill:  #28AAF1;
+}
+#toggleButtonAlquiler:hover,#toggleButtonVenta:hover{
+	-fx-border-width: 0px 0px 3px 0px;
+	
+}
+#toggleButtonAlquiler:selected,#toggleButtonVenta:selected{
+	-fx-background-color: #28AAF1;
+	-fx-border-color: WHITE;
+	-fx-border-width: 0.0px 0px 3px 0px;
+	-fx-text-fill: white;
+}
+
+
+#labelTipoLetraRojo{
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 13px;
+	-fx-text-fill: #fe0000;
+}
+
+#labelTipoLetraAmbar{
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 13px;
+	-fx-text-fill: #ffc904;
+}
+
+#labelTipoLetraVerde{
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 13px;
+	-fx-text-fill: #00df02;
+}
+
+#titulo{
+	-fx-font: bold italic 22pt Arial;
+	-fx-font-size: 22px;
+	-fx-text-fill: #2600ff;
+}
+
+#labelInicio1{
+	-fx-font: bold italic 22pt Arial;
+	-fx-font-size: 22px;
+	-fx-text-fill: #000;
+}
+
+#labelInicio2{
+	-fx-font: bold italic 22pt Arial;
+	-fx-font-size: 22px;
+	-fx-text-fill: #2600ff;
+}
+
+#tipoLetraCantidad{
+	-fx-font: bold 17pt Arial;
+	-fx-text-fill: #ffffff;
+	-fx-background-radius: 50em;
+}
+
+#tipoLetraItem{
+	-fx-font: bold 12pt Arial;
+}
+
+#bvoxLeft{
+	-fx-background-radius: 5 0 0 5;
+}
+
+#bvoxCenter{
+	-fx-background-radius: 0 5 5 0;
+	-fx-background-color: #ffffff;	
+}
+
+#efectoCuadrado{
+	-fx-effect:  dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 2,2);
+}
+
+#tabPaneLetraInicio{
+	-fx-background-color: #f16a1b;
+	-fx-font: bold italic 15pt Arial;
+	-fx-font-size: 14px;
+	-fx-text-fill: #ffffff;
+}
+
+#tabPaneEstiloInicio{
+	-fx-border-color:  #f16a1b;
+	-fx-border-radius: 5 5 0 0;
+}
+
+#tabPaneEstiloInicio1{
+	-fx-border-color:  #f16a1b;
+	-fx-border-radius: 0 0 5 5;
+}
+
+#pago{
+	-fx-font: bold 16pt Arial;
+	-fx-font-size: 16px;
+	-fx-text-fill: #000;
+}
+
+/*modificacion */
+#letraBalanceIngreso{
+	-fx-font: bold italic 16pt Arial;
+	-fx-font-size: 16px;
+	-fx-text-fill: #00df02;
+}
+
+#letraBalanceEgreso{
+	-fx-font: bold italic 16pt Arial;
+	-fx-font-size: 16px;
+	-fx-text-fill: #fe0000;
+}
+
+#letraBalanceTotal{
+	-fx-font: bold italic 17pt Arial;
+	-fx-font-size: 17px;
+	-fx-text-fill: #000;
+}
+/* char */
+.bar-chart {
+    -fx-bar-gap: 6;
+    -fx-category-gap: 10;
+}
+
+.chart-bar.default-color0 {
+    -fx-bar-fill: #00df02;
+}
+
+.chart-bar.default-color1 {
+    -fx-bar-fill: #fe0000;
+}
+
+.chart-bar.default-color2 {
+    -fx-bar-fill: blue;
+}
+
+
+
+

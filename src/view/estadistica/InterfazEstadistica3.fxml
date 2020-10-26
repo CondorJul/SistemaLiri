@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.estadistica.CEstadistica">
+   <center>
+      <JFXTabPane styleClass="specialJFXTabPane" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Estadistica 1">
+               <content>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="580.0" prefWidth="1000.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="198.0" layoutY="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="206.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0">
+                                       <top>
+                                          <BorderPane id="tabPaneLetra" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <Label text="Balance General por  Concepto" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Cambria Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </left>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </BorderPane>
+                                       </top>
+                                       <center>
+                                          <ScrollPane id="scrollPaneGraficaProvincia" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <content>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <center>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Accordion>
+                                                                    <panes>
+                                                                      <TitledPane id="letraBalanceIngreso" fx:id="titlePaneTotalIngresoConcepto" alignment="CENTER_RIGHT" animated="false" lineSpacing="10.0" text="total" wrapText="true">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TableView fx:id="tableViewIngresoConcepto" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                                                                      <columns>
+                                                                                        <TableColumn fx:id="tableColumnICConcepto" maxWidth="10000.0" minWidth="200.0" prefWidth="400.0" text="Concepto" />
+                                                                                        <TableColumn fx:id="tableColumnICtotal" prefWidth="75.0" text="Total" />
+                                                                                      </columns>
+                                                                                       <columnResizePolicy>
+                                                                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                                       </columnResizePolicy>
+                                                                                    </TableView>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceIngreso" text="Total de Ingresos" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                      </TitledPane>
+                                                                      <TitledPane id="letraBalanceEgreso" fx:id="titlePaneTotalEgresoConcepto" alignment="CENTER_RIGHT" animated="false" text="total">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TableView fx:id="tableViewEgresoConcepto" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                                                                       <columns>
+                                                                                          <TableColumn fx:id="tableColumnECConcepto" maxWidth="10000.0" minWidth="200.0" prefWidth="400.0" text="Concepto" />
+                                                                                          <TableColumn fx:id="tableColumnECTotal" prefWidth="75.0" text="Total" />
+                                                                                       </columns>
+                                                                                       <columnResizePolicy>
+                                                                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                                       </columnResizePolicy>
+                                                                                    </TableView>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceEgreso" text="Total de Egresos" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                      </TitledPane>
+                                                                      <TitledPane id="letraBalanceTotal" fx:id="titlePaneTotalBalanceConcepto" alignment="CENTER_RIGHT" animated="false" text="total">
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceTotal" text="Balance" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                           <content>
+                                                                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <StackedBarChart fx:id="stackedBarChartConcepto" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                       <xAxis>
+                                                                                          <CategoryAxis label="Concepto" side="BOTTOM" />
+                                                                                       </xAxis>
+                                                                                       <yAxis>
+                                                                                          <NumberAxis label="Soles (S/)" side="LEFT" />
+                                                                                       </yAxis>
+                                                                                    </StackedBarChart>
+                                                                                    <Label fx:id="labelInformacionEstadisticaConcepto" alignment="CENTER" prefHeight="56.0" prefWidth="101.0" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10;" text="Label" textFill="WHITE" visible="false" wrapText="true">
+                                                                                       <font>
+                                                                                          <Font name="Arial Narrow" size="21.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                           </content>
+                                                                      </TitledPane>
+                                                                    </panes>
+                                                                  </Accordion>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                </BorderPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </center>
+                                       <padding>
+                                          <Insets right="5.0" />
+                                       </padding>
+                                    </BorderPane>
+                                    <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <top>
+                                          <BorderPane id="tabPaneLetra" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                                             <left>
+                                                <Label text="Balance General por  Mes" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Cambria Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </left>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </BorderPane>
+                                       </top>
+                                       <center>
+                                          <ScrollPane id="scrollPaneGraficaProvincia" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <content>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <center>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Accordion>
+                                                                     <panes>
+                                                                        <TitledPane id="letraBalanceIngreso" fx:id="titlePaneTotalIngresoMes" alignment="CENTER_RIGHT" animated="false" lineSpacing="10.0" text="total" wrapText="true">
+                                                                           <content>
+                                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TableView fx:id="tableViewIngresoMes" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                                                                       <columns>
+                                                                                          <TableColumn fx:id="tableColumnIngresoMes" maxWidth="10000.0" minWidth="200.0" prefWidth="400.0" text="Mes" />
+                                                                                          <TableColumn fx:id="tableColumnTotalIngresoMes" prefWidth="75.0" text="Total" />
+                                                                                       </columns>
+                                                                                       <columnResizePolicy>
+                                                                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                                       </columnResizePolicy>
+                                                                                    </TableView>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                           </content>
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceIngreso" text="Total de Ingresos" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                        </TitledPane>
+                                                                        <TitledPane id="letraBalanceEgreso" fx:id="titlePaneTotalEgresoMes" alignment="CENTER_RIGHT" animated="false" text="total">
+                                                                           <content>
+                                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TableView fx:id="tableViewEgresoMes" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                                                                       <columns>
+                                                                                          <TableColumn fx:id="tableColumnEgresoMes" maxWidth="10000.0" minWidth="200.0" prefWidth="400.0" text="Mes" />
+                                                                                          <TableColumn fx:id="tableColumnTotalEgresoMes" prefWidth="75.0" text="Total" />
+                                                                                       </columns>
+                                                                                       <columnResizePolicy>
+                                                                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                                                       </columnResizePolicy>
+                                                                                    </TableView>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                           </content>
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceEgreso" text="Total de Egresos" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                        </TitledPane>
+                                                                        <TitledPane id="letraBalanceTotal" fx:id="titlePaneTotalBalanceMes" alignment="CENTER_RIGHT" animated="false" text="total">
+                                                                           <graphic>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="400.0">
+                                                                                 <children>
+                                                                                    <Label id="letraBalanceTotal" text="Balance" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </graphic>
+                                                                        </TitledPane>
+                                                                     </panes>
+                                                                  </Accordion>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </center>
+                                                </BorderPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </center>
+                                       <padding>
+                                          <Insets right="5.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab text="Estadistica 2" />
+         </tabs>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>

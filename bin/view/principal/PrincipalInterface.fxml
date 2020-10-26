@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principal.PrincipalController">
+   <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu id="labelTipoLetra" mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="menuItemSalir" mnemonicParsing="false" text="Salir">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/cerrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemRefrescar" mnemonicParsing="false" text="Refrescar" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/refrescar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F5" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+            <Menu id="labelTipoLetra" mnemonicParsing="false" text="Vista" visible="false">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+          <Menu id="labelTipoLetra" mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem fx:id="menuItemAlquiler" mnemonicParsing="false" text="Alquileres">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/alquiler2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+              <MenuItem fx:id="menuItemArticulo" mnemonicParsing="false" text="Artículos">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/articulo2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="menuItemCliente" mnemonicParsing="false" text="Clientes">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/cliente1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemContabilidad" mnemonicParsing="false" text="Contabilidad">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ingresosEgresos1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F8" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemDevolucion" mnemonicParsing="false" text="Devoluciones">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/alquiler1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F3" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemEstadistica" mnemonicParsing="false" text="Estadística">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/reportes2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F10" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemImportante" mnemonicParsing="false" text="Importante">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/importante3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F7" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemInicio" mnemonicParsing="false" text="Inicio">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/logo3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F8" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemProveedor" mnemonicParsing="false" text="Proveedores">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/proveedor3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F9" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemRecomendacion" mnemonicParsing="false" text="Recomendación">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/recomendacion4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F6" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemReputacion" mnemonicParsing="false" text="Reputación">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/recomendacion5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F7" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemUsuario" mnemonicParsing="false" text="Usuarios">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/usuarios5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F12" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+            <Menu id="labelTipoLetra" fx:id="menuTranExt" mnemonicParsing="false" text="Transacciones Externas">
+              <items>
+                  <MenuItem fx:id="menuItemPiezasEspera" mnemonicParsing="false" text="Piezas en Espera">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="menuItemPiezasLavanderia" mnemonicParsing="false" text="Piezas en Lavanderia">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemPiezasReparacion" mnemonicParsing="false" text="Piezas en Reparacion">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemPiezasPlanchado" mnemonicParsing="false" text="Piezas en Planchado">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </Menu>
+            <Menu id="labelTipoLetra" fx:id="menuConfiguracion" mnemonicParsing="false" text="Configuración">
+              <items>
+                <MenuItem fx:id="menuItemPorDesc" mnemonicParsing="false" text="Porcentaje de Descuento por Cupones">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemPorPRecom" mnemonicParsing="false" text="Porcentaje de Pago por Recomendación">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemInterReput" mnemonicParsing="false" text="Intervalos de Reputación">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/configuracion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+              </items>
+            </Menu>
+            <Menu id="labelTipoLetra" fx:id="menuHerramientas" mnemonicParsing="false" text="Herramientas">
+              <items>
+                <MenuItem fx:id="menuItemCopiaSeguridad" mnemonicParsing="false" text="Hacer copia de seguridad de la Base de Datos">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/copiaSeguridad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemRestaurarCopiaSeguridad" mnemonicParsing="false" text="Restaurar copia de seguridad de la Base de Datos">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/copiaSeguridad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+          <Menu id="labelTipoLetra" fx:id="menuAyuda" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="menuItemGuiaUsuario" mnemonicParsing="false" text="Guia del Usuario">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/guia.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuItemAcercaDe" mnemonicParsing="false" text="Acerca de..." visible="false">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/de.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="U" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <StackPane layoutY="23.0" prefHeight="677.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <BorderPane prefHeight="100.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <BorderPane prefWidth="148.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonInicio" mnemonicParsing="false" prefWidth="150.0" selected="true" BorderPane.alignment="CENTER">
+                                 <graphic>
+                                    <HBox prefHeight="92.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../img/logo3.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Inicio">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font></Tooltip>
+                                 </tooltip>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleGroupOpciones" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                           </center>
+                        </BorderPane>
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <ScrollPane id="menuFondo" fitToWidth="true" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                                 <content>
+                                    <AnchorPane id="menuFondo" prefHeight="98.0">
+                                       <children>
+                                          <HBox id="menuFondo" fx:id="hBoxMenu" alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="1128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonArticulo" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/articulo2.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="ARTICULOS">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonAlquiler" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/alquiler2.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="ALQUILERES">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonDevolucion" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/alquiler1.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="DEVOLUCIONES">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonContabilidad" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/ingresosEgresos1.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="CONTABILIDAD">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonProveedor" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/proveedor3.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="PROVEEDORES">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonImportante" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/importante3.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="IMPORTANTE">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonEstadistica" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                                   <graphic>
+                                                      <VBox alignment="CENTER" prefHeight="90.0">
+                                                         <children>
+                                                            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/reportes2.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="ESTADISTICAS">
+                                                               <font>
+                                                                  <Font name="Arial Narrow Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </center>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </top>
+               <left>
+                  <BorderPane prefWidth="150.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <ScrollPane id="menuFondo" fitToHeight="true" hbarPolicy="NEVER" prefHeight="609.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <AnchorPane id="menuFondo" prefHeight="572.0" prefWidth="148.0">
+                                 <children>
+                                    <VBox id="menuFondo" fx:id="vBoxMenu" alignment="TOP_CENTER" prefHeight="510.0" prefWidth="148.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Separator prefWidth="200.0" />
+                                          <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonCliente" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                             <graphic>
+                                                <VBox alignment="CENTER" prefHeight="90.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../img/cliente1.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="CLIENTES">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Separator prefWidth="200.0" />
+                                          <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonUsuario" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                             <graphic>
+                                                <VBox alignment="CENTER" prefHeight="90.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../img/usuarios5.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="USUARIOS">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Separator prefWidth="200.0" />
+                                          <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonRecomendacion" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                             <graphic>
+                                                <VBox alignment="CENTER" prefHeight="90.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../img/recomendacion4.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="RECOMENDACION">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Separator prefWidth="200.0" />
+                                          <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonReputacion" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                             <graphic>
+                                                <VBox alignment="CENTER" prefHeight="90.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../img/recomendacion5.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="REPUTACION">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Separator prefWidth="200.0" />
+                                          <ToggleButton id="toggleButtonOpcionesMenu" fx:id="toggleButtonPerfil" mnemonicParsing="false" prefWidth="150.0" toggleGroup="$toggleGroupOpciones">
+                                             <graphic>
+                                                <VBox alignment="CENTER" prefHeight="90.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../img/perfil2.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label id="tipoLetra" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="PERFIL">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Separator prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </left>
+               <center>
+                  <BorderPane fx:id="borderPaneContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+      <StackPane id="stackPaneFodoSemiTransparente" fx:id="stackPaneTransparencia" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
